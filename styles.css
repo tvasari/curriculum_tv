@@ -1,6 +1,10 @@
 html, body {
 	margin: 0;
 	padding: 0;
+	width:100%;
+	height:100%;
+	overflow: auto;
+	background-color: rgb(18, 67, 158);
 	font-family: 'Raleway', sans-serif;
 }
 
@@ -14,7 +18,7 @@ html, body {
 }
 
 h1 {
-	font-size: 4rem;
+	font-size: 8vw;
 	margin-top: 0;
 	margin-bottom: 0;
 	font-family: 'Playfair Display', serif;
@@ -25,6 +29,19 @@ h2 {
 	margin-top: 0;
 }
 
+h3, h4 {
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 1.3rem;
+}
+
+h4 {
+	font-size: 1rem;
+}
+
+
 ul {
 	list-style-type: none;
 	padding-left: 0;
@@ -32,20 +49,15 @@ ul {
 
 p {
 	margin-block-start: 0.5em;
+	width: fit-content;
 }
 
 .contacts {
-	padding: 25% 10%;
+	padding: 0 10%;
 }
 
 .competenze, .lingue {
 	padding: 0 10%;
-}
-
-
-.container {
-	display: grid;
-	grid-template-columns: 80% 20%;
 }
 
 .scuola {
@@ -56,17 +68,58 @@ p {
 	margin: 0 0 10px;
 }
 
-.destra {
-	background-color: rgb(18, 67, 158);
+div.sinistra {
 	color: white;
 	margin: 0;
+	width: 35vw;
 }
 
-.destra a {
+div.sinistra > * {
+	margin-top: 15%;
+	padding-left: 10px;
+}
+
+div.destra {
+	background-color: white;
+	width: fit-content;
+	width: 65vw;
+	padding-left: 10px;
+}
+
+.sinistra a {
 	text-decoration: none;
 	color: white;
 }
 
 a:hover {
 	color: rgb(155, 235, 255);
-  }
+}
+
+div.container {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	float: right;
+}
+
+@media only screen and (max-width: 414px) {
+	.istruzione, .esperienze, header  {
+		padding: 4% 0;
+	}
+	.istruzione {
+		padding: 0;
+	}
+	.esperienza a {
+		font-size: 3.3vw;
+	}
+	li.scuola {
+		display: block;
+	}
+	h3 {
+		font-size: 5vw;
+	}
+	.sinistra p {
+		font-size: 4vw;
+	}
+
+}  
